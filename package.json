@@ -1,7 +1,7 @@
 {
   "name": "grunt-dockerize",
   "description": "Task plugin for grunt that builds and pushs docker images.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/dani8art/grunt-dockerize",
   "author": {
     "name": "Daniel Arteaga",
@@ -16,10 +16,12 @@
   "bugs": {
     "url": "https://github.com/dani8art/grunt-dockerize/issues"
   },
-  "licenses": [{
-    "type": "GPL-3.0+",
-    "url": "https://github.com/dani8art/grunt-dockerize/blob/master/LICENSE"
-  }],
+  "licenses": [
+    {
+      "type": "GPL-3.0+",
+      "url": "https://github.com/dani8art/grunt-dockerize/blob/master/LICENSE"
+    }
+  ],
   "engines": {
     "node": ">= 6.0.0"
   },

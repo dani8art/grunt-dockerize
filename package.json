@@ -42,6 +42,7 @@
     "grunt-release-github": "^1.0.4"
   },
   "keywords": [
-    "grunt-dockerize"
+    "grunt-dockerize",
+    "gruntplugin"
   ]
 }

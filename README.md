@@ -132,9 +132,9 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ### Latest release
 
-The version 0.0.1 is the latest stable version of grunt-dockerize component.
-see [release note](https://github.com/dani8art/grunt-dockerize/releases/tag/0.0.1) for details.
+The version 0.0.2 is the latest stable version of grunt-dockerize component.
+see [release note](https://github.com/dani8art/grunt-dockerize/releases/tag/0.0.2) for details.
 
 For running:
 
-- Download latest version from [0.0.1](https://github.com/dani8art/grunt-dockerize/releases/tag/0.0.1)
+- Download latest version from [0.0.2](https://github.com/dani8art/grunt-dockerize/releases/tag/0.0.2)

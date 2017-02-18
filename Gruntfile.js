@@ -1,5 +1,5 @@
 /*!
-grunt-dockerize 0.0.1, built on: 2017-02-03
+grunt-dockerize 0.0.2, built on: 2017-02-18
 Copyright (C) 2017 Daniel Arteaga
 http://darteaga.com/
 https://github.com/dani8art/grunt-dockerize

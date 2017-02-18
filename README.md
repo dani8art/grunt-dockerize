@@ -41,9 +41,9 @@ grunt.initConfig({
 
 ### Options
 
-``` 
+```js 
 {
-    registry: 'https://registry.hub.docker.com',
+    registry: 'https://registry.hub.docker.com', //NOT SUPPORTED YET
     auth: {
       email: 'DOCKER_HUB_EMAIL',
       username: 'DOCKER_HUB_USERNAME',
@@ -56,9 +56,18 @@ grunt.initConfig({
 ```
 
 #### options.auth
-Type: `Object`
+`options.auth` contains the name of evironment variables that will be used for logging
+in docker hub. Also, `auth.username` will be used for build the name of docker image,
+ `auth.username/options.name` = `darteaga/image01`
 
-Default value: 
+ Name | Type | Description
+ -----|------|------------
+ email| `String`| **Required**. The name of evironment variable that contains the value of email. By default, its value is DOCKER_HUB_EMAIL and `grunt-dockerize` will expect a value on process.env["DOCKER_HUB_EMAIL"].
+ username | `String` | **Required**. The name of evironment variable that contains the value of username. By default, its value is DOCKER_HUB_USERNAME and `grunt-dockerize` will expect a value on process.env["DOCKER_HUB_USERNAME"].
+ password | `String` | **Required**. The name of evironment variable that contains the value of password. By default, its value is DOCKER_HUB_PASSWORD and `grunt-dockerize` will expect a value on process.env["DOCKER_HUB_PASSWORD"].
+
+**Example**: 
+
 ```js
 auth: {
     email: "DOCKER_HUB_EMAIL",
@@ -66,35 +75,34 @@ auth: {
     password: "DOCKER_HUB_PASSWORD"
   }
 ```
-A object that contains docker hub credentials for login. `auth.username` is used for the owner of image in image name: `auth.username/options.name` = `darteaga/image01`
 
 #### options.name
-Type: `String`
 
-Default value: `this.target` in this example `image01`
+Name | Type | Description
+-----|------|-------------
+name | `String`| **Required**.  A string value that will be used such as the image name. By default, It is used `this.target`.
 
-A string value that is used for the image name.
+
 
 #### options.push
-Type: `Boolean`
 
-Default value: `false`
+Name | Type | Description
+-----|------|-------------
+push | `Boolean`| **Required**. A boolean value that is used to decide if the built image is pushed. By befault, it is `false`.
 
-A boolean value that is used to decide if the built image is pushed.
 
 #### options.tag
-Type: `String`
 
-Default value: `latest`
-
-A string value that is used for the image tag.
+Name | Type | Description
+-----|------|-------------
+tag | `String`| **Required**. A string value that is used for the image tag. By befault, it is `latest`.
 
 ### Usage Examples
 
 #### Custom Options
-In this example, custom options are used to do build an push a docker image
+In this example, custom options are used to build an push a docker image
 
-> Remember that you must have a 'Dockerfile' in current directory.
+> **WARNING**. Remember that you must have a 'Dockerfile' in current directory.
 
 ```js
 grunt.initConfig({
@@ -114,6 +122,7 @@ grunt.initConfig({
 ```
 
 Run:
+
 ```js
 grunt dockerize
 ```
